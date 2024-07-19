@@ -1,9 +1,16 @@
-import { Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function SettingsScreen(){
+
+    const navigation = useNavigation<any>();
+
+
     return(
         <View>
-            <Text>Settings Screen</Text>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate("Ad")}>
+            <Text>Ad'e Git</Text>
+        </TouchableOpacity>
+    </View>
     )
 }
